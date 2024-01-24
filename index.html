@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список студентов</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="container-title">Список студентов</h1>
+    <div class="students-block">
+      <div class="student__btn">
+        <button id="btn-students-open" class="btn-students">Добавить студента</button>
+        <button id="btn-filter" class="btn-students">Фильтр</button>
+
+
+        <div class="add-students">
+          <form id="students-list" class="students-list">
+            <div class="student-list-item">
+              <label class="form-label name-label">Фамилия</label>
+              <input type="text" class="input surname" id="surname" placeholder="Иванов">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Имя</label>
+              <input type="text" class="input name" id="name" placeholder="Иван">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Отчество</label>
+              <input type="text" class="input middlename" id="middlename" placeholder="Иванович">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Дата рождения</label>
+              <input type="date" maxlength="4" class="input year-of-birth" id="year-of-birth">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Год поступления</label>
+              <input type="number" class="input  year-of-admission" id="year-of-admission" placeholder="2020">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label">Факультет</label>
+              <input type="text" class="input form-select faculty" id="faculty" placeholder="Мировая экономика">
+            </div>
+            <button type="submit" id="btn-students-add" class="btn-students btn-students-add">Добавить студента</button>
+            <button id="btn-students-close" class="btn-students btn-students-add">Отменить</button>
+          </form>
+
+        </div>
+        <div class="search-students">
+          <form id="students-filter" class="students-list">
+            <div class="student-list-item">
+              <label class="form-label name-label">Ф. И. О.</label>
+              <input type="text" class="input surname" id="fullname-filter" placeholder="Иванов Иван Петрович">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label">Факультет</label>
+              <input type="text" class="input form-select faculty" id="faculty-filter" placeholder="Мировая экономика">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Год поступления</label>
+              <input type="number" class="input  year-of-admission" id="startstudy-filter" placeholder="2020">
+            </div>
+            <div class="student-list-item">
+              <label class="form-label name-label">Год окончания обучения</label>
+              <input type="number" class="input  year-of-admission" id="endstudy-filter" placeholder="2026">
+            </div>
+            <button type="submit" id="filter-students" class="btn-students btn-students-add">Фильтровать</button>
+            <button id="filter-students-close" class="btn-students btn-students-add">Отменить</button>
+          </form>
+        </div>
+      </div>
+      <div class="student-info">
+        <h2 class="student-info-title">Студенты</h2>
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th id="fullname">ФИО</th>
+              <th id="faculti">Факультет</th>
+              <th id="date">Дата рождения и возраст</th>
+              <th id="startstudy">Годы обучения и номер курса</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!-- <tr>
+              <td>Иванов Иван Петрович</td>
+              <td>Экономика</td>
+              <td>01.01.1990</td>
+              <td>2020</td>
+            </tr> <tr>
+              <td>Петров Кабан Александрович</td>
+              <td>Стомотолог</td>
+              <td>01.01.1990</td>
+              <td>2020</td>
+            </tr> <tr>
+              <td>Сидоров Олег Петрович</td>
+              <td>Врач</td>
+              <td>01.01.1990</td>
+              <td>2020</td>
+            </tr> <tr>
+              <td>Галстян Алина Олегович</td>
+              <td>Бригадир</td>
+              <td>01.01.1990</td>
+              <td>2020</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
